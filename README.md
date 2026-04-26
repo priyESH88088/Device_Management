@@ -42,7 +42,10 @@ JWT_SECRET=your_secret_key
 PORT=5000
 4. Run Project
 npm start
-📡 API Routes
+
+---
+
+###📡 API Routes
 Auth
 POST /api/v1/auth/register
 POST /api/v1/auth/login
