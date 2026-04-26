@@ -1,130 +1,70 @@
-﻿# Device_Management
- ##  Smart Device Management Backend
+📱 Smart Device Management Backend
 
-A backend service for managing users and their devices.  
-Built with **Node.js, Express, MongoDB, and JWT authentication**.
+A RESTful backend system for managing devices, built using Node.js, Express, and MongoDB. It allows users to register, manage, and track devices efficiently.
 
----
+🚀 Features
+User Authentication (JWT-based)
+Add / Update / Delete Devices
+Device tracking system
+Secure API with middleware protection
+MongoDB database integration
+RESTful architecture
 
-## Setup Instructions
+⚙️ Tech Stack
+Node.js
+Express.js
+MongoDB (Mongoose)
+JWT Authentication
+bcryptjs
+Middleware (Auth protection)
 
- **Clone the repository**
-   ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
-Install dependencies
-
-bash
-Copy
-Edit
+📦 Installation
+1. Clone Repository
+git clone https://github.com/priyESH88088/Device_Management.git
+2. Install Dependencies
 npm install
-Create .env file in project root:
+3. Setup Environment Variables
 
-env
-Copy
-Edit
+Create a .env file:
+
+MONGO_URL=mongodb://127.0.0.1:27017/DeviceManagement
+JWT_SECRET=your_secret_key
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=mysecretkey123
-Run the server
+4. Run Project
+npm start
 
-bash
-Copy
-Edit
-npm run dev
-The server will start at: http://localhost:5000
+📁 Project Structure
+controllers/
+models/
+routes/
+middleware/
+config/
+index.js
 
- 
-## API Documentation
-1. Authentication
-##Signup
-http
-Copy
-Edit
-POST /auth/signup
-Body:
+🔗 API Endpoints
+Auth Routes
+POST /api/v1/auth/register
+POST /api/v1/auth/login
+Device Routes
+POST /api/v1/device
+GET /api/v1/device
+PATCH /api/v1/device/:id
+DELETE /api/v1/device/:id
 
-json
-Copy
-Edit
-{
-  "email": "user@example.com",
-  "password": "password123"
-}
-Response:
+🔒 Authentication
 
-json
-Copy
-Edit
-{
-  "success": true,
-  "message": "User registered successfully"
-}
-## Login
-h
-Copy
-Edit
-POST /auth/login
-Body:
+Protected routes require token:
 
-json
-Copy
-Edit
-{
-  "email": "user@example.com",
-  "password": "password123"
-}
-Response:
+Authorization: Bearer <token>
 
-json
-Copy
-Edit
-{
-  "success": true,
-  "token": "jwt_token_here"
-}
-2. Device Management
- All routes below require Authorization: Bearer <token>
+👨‍💻 Author
 
-## Add Device
-http
-Copy
-Edit
-POST /devices
-Body:
+Priyesh Dwivedi
+GitHub: https://github.com/priyESH88088
 
-json
-Copy
-Edit
-{
-  "name": "Smart Light",
-  "type": "Light",
-  "status": "online"
-}
-
-# Get All Devices
-http
-Copy
-Edit
-GET /devices
-
-# Update Device
-http
-Copy
-Edit
-PUT /devices/:id
-Body (example):
-
-json
-Copy
-Edit
-{
-  "status": "offline"
-}
-
-# Delete Device
-http
-Copy
-Edit
-DELETE /devices/:id
+⭐ Future Improvements
+Device analytics dashboard
+Role-based access (Admin/User)
+Frontend UI (React)
+Real-time device monitoring
 
