@@ -17,25 +17,62 @@ A secure backend system for managing and tracking devices. Built using Node.js, 
 
 ## ⚙️ Tech Stack
 
-- Node.js  
-- Express.js  
-- MongoDB (Mongoose)  
-- JWT Authentication  
-- bcryptjs  
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- bcryptjs
 
 ---
 
 ## 📦 Installation
 
-### 1. Clone Repository
+### Clone Repository
 ```bash
 git clone https://github.com/priyESH88088/Device_Management.git
-
 Install Dependencies
 npm install
-
 Setup Environment Variables
+
+Create .env file:
+
 MONGO_URL=mongodb://127.0.0.1:27017/DeviceManagement
 JWT_SECRET=your_secret_key
 PORT=5000
+Run Project
+npm start
+📡 API Routes
+Auth Routes
+POST /api/v1/auth/register
+POST /api/v1/auth/login
+Device Routes
+POST /api/v1/device
+GET /api/v1/device
+PATCH /api/v1/device/:id
+DELETE /api/v1/device/:id
+🔒 Authentication
+
+Authorization header:
+
+Bearer token required for protected routes
+
+📁 Project Structure
+
+controllers/
+models/
+routes/
+middleware/
+config/
+index.js
+
+👨‍💻 Author
+
+Priyesh Dwivedi
+GitHub: https://github.com/priyESH88088
+
+⭐ Future Improvements
+Role-based access control
+Device analytics dashboard
+Frontend UI (React)
+Real-time tracking system
 
